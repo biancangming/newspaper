@@ -4,7 +4,7 @@
       <n-message-provider>
         <n-notification-provider>
           <n-dialog-provider>
-            <router-view></router-view>
+            <PeopleDaily />
           </n-dialog-provider>
         </n-notification-provider>
       </n-message-provider>
@@ -15,14 +15,15 @@
 <script lang="ts" setup>
 import { zhCN, dateZhCN } from "naive-ui";
 import { darkTheme, lightTheme } from 'naive-ui'
-
 import { useWebviewMsgStore } from "./stores/webviewMsg";
+import PeopleDaily from "./components/PeopleDaily.vue";
 
 const webviewMsgStore = useWebviewMsgStore()
 
 const NaiveTheme = computed(()=> {
     return webviewMsgStore.themeMode === 'dark' ? darkTheme : lightTheme
 })
+
 
 // 初始立即设置一次，以确保 Tailwind 的 dark: 变体和 NaiveUI 主题与当前模式一致
 watch(()=> webviewMsgStore.themeMode, (newVal)=> {
@@ -32,4 +33,5 @@ watch(()=> webviewMsgStore.themeMode, (newVal)=> {
         document.documentElement.classList.remove('dark')
     }
 }, { immediate: true })
+
 </script>

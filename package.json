@@ -1,11 +1,15 @@
 {
-  "name": "metools-app-demo",
-  "cnName": "迷途demo",
+  "name": "metools-app-newspaper",
+  "cnName": "看个报纸",
   "version": "1.0.0",
-  "description": "一个基于 Vue 3 的现代化 Web 应用",
-  "author": "Jiawei",
+  "description": "在 metools 平台中预览当日《人民日报》版面，使用浏览器原生 PDF 查看报纸，支持亮/暗主题与版面切换",
+  "author": "一个橙子 pro",
   "license": "MIT",
   "type": "module",
+  "metoos": {
+    "width": 1300,
+    "height": 800
+  },
   "files": [
     "dist",
     "*.png",
@@ -22,6 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.14",
     "@types/node": "^24.5.2",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/runtime-core": "^3.5.21",
