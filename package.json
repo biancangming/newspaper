@@ -46,6 +46,7 @@
     "web-app"
   ],
   "dependencies": {
+    "pinia": "^3.0.3",
     "unplugin-auto-import": "^20.2.0",
     "unplugin-vue-components": "^29.1.0"
   }
